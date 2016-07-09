@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app-unison:
+    image: alpine
+    container_name: 'your-app'
+    # that the important thing
+    volumes_from:
+      - container:appcode-unison:rw # will be mounted on /var/www
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+# that the important thing
+volumes:
+  appcode-unison:
+    external: true
