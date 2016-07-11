@@ -10,16 +10,12 @@ git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
-Now start the sync, first choose either unison or rsync ( you can actually mix both in a single docker-sync.yml
+Now start the sync, first choose either unison or rsync ( you can actually mix both in a single docker-sync.yml)
 
 
 ```
 cd rsync
-docker-sync start
+docker-sync-stack start
 ```
 
-In a new shell, enter into docker-sync-boilerplate/rsync and start our app-server
-
-```
-docker-compose up
-```
+This will start the sync, and start your app-stack defined by in the docker-compose file. All in one step
