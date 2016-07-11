@@ -1,11 +1,15 @@
-This is boilerplate for [docker-sync](https://github.com/EugenMayer/docker_sync)
-Either start from here to implement fast volume-shares for you project or simply test
-its performance
+This is boilerplate for [docker-sync](https://github.com/EugenMayer/docker_sync).
+Either as a starting point for your configuration or to try out what docker-sync offers in terms of performance and the toolchain in practical.
 
 Start with
 
+Install docker-sync, if yet did not
 ```
 gem install docker-sync
+```
+
+Now the boilerplate
+```
 git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
