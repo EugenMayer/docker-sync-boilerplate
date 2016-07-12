@@ -1,0 +1,16 @@
+options:
+  compose-file-path: './docker-compose/docker-compose.yml'
+  verbose: true # make the whole sync verbose
+syncs:
+  advanced-sync: #tip: add -sync and you keep consistent names als a convention
+    src: './app'
+    dest: '/var/www'
+    sync_args: '--delete' # delete files on the container if they are deleted on the host
+    sync_host_ip: 'localhost'
+    sync_host_port: 10872
+    sync_user: 'www-data'
+    sync_userid: '1001'
+    sync_group: 'www-data'
+    sync_groupid: '1002'
+    watch_args: '-v' # make fswatch verbose
+

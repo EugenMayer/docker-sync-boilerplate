@@ -1,14 +1,14 @@
 version: "2"
 services:
-  app-rsync:
+  app-advanced:
     image: alpine
-    container_name: 'your-app'
+    container_name: 'your-advanced-app'
     # that the important thing
     volumes_from:
-      - container:appcode-rsync-sync:rw # will be mounted on /var/www
+      - container:advanced-sync:rw # will be mounted on /var/www
     command: ['watch', '-n3', 'cat /var/www/index.html']
 
 # that the important thing
 volumes:
-  appcode-rsync-sync:
+  advanced-sync:
     external: true
