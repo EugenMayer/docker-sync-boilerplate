@@ -3,21 +3,19 @@ Either as a starting point for your configuration or to try out what docker-sync
 
 Start with
 
-1. Install docker-sync, if you did not yet
+ 1) Install docker-sync, if you did not yet
 
 ```
 gem install docker-sync
 ```
 
----
-
-2. Now get the boilerplate
+ 2) Now get the boilerplate
 ```
 git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
-3. Now start the sync, first choose the boilerplate either simplest, unison, rsync or even advanced
+ 3) Now start the sync, first choose the boilerplate either simplest, unison, rsync or even advanced
 
 ---
 
