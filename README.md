@@ -43,6 +43,8 @@ cd splitted-compose
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
 ```
 
+More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-you-docker-compose.yml-portable)
+
 ## Reference
 
 If you want to know, what options you actually have, see the [configuration-reference](https://github.com/EugenMayer/docker-sync/wiki/2.-Configuration#docker-syncyml)
