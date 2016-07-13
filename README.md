@@ -15,16 +15,34 @@ git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
- 3) Now start the sync, first choose the boilerplate either simplest, unison, rsync or even advanced
+ 3) Now start the sync, first choose the boilerplate either simplest, unison, rsync, splitted or even advanced
 
 ---
+
+## Examples
 
 For example rsync
 ```
 cd rsync
 docker-sync-stack start
 ```
-
 This will start the sync, and start your app-stack defined by in the docker-compose file. All in one step
+
+---
+
+If you wonder, how you would keep the docker-compose.yml portable, see splitted-compose. The changes for docker-sync are incorporated into an overaly-docker-compose file
+In this case you do:
+
+```
+cd splitted-compose
+docker-sync start
+
+<open a new shel>
+
+cd splitted-compose
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
+```
+
+## Reference
 
 If you want to know, what options you actually have, see the [configuration-reference](https://github.com/EugenMayer/docker-sync/wiki/2.-Configuration#docker-syncyml)

@@ -1,0 +1,7 @@
+# This is our production compose file - not changed for docker-sync or similar
+version: "2"
+services:
+  my-app::
+    image: alpine
+    container_name: 'your-simplest-app'
+    command: ['watch', '-n3', 'cat /var/www/index.html']

@@ -1,0 +1,12 @@
+# this is our development docker-compose building on top of the prodicker docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  my-app:
+    volumes_from:
+      - container:splitted-sync:rw # will be mounted on /var/www
+
+volumes:
+  splitted-sync:
+    external: true
