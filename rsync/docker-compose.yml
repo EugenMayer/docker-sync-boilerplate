@@ -1,14 +1,8 @@
+# This is our production compose file - not changed for docker-sync or similar
+
 version: "2"
 services:
   app-rsync:
     image: alpine
     container_name: 'your-app'
-    # that the important thing
-    volumes_from:
-      - container:appcode-rsync-sync:rw # will be mounted on /var/www
     command: ['watch', '-n3', 'cat /var/www/index.html']
-
-# that the important thing
-volumes:
-  appcode-rsync-sync:
-    external: true

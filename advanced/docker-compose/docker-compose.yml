@@ -1,14 +1,9 @@
+# This is our production compose file - not changed for docker-sync or similar
+
 version: "2"
 services:
   app-advanced:
     image: alpine
     container_name: 'your-advanced-app'
-    # that the important thing
-    volumes_from:
-      - container:advanced-sync:rw # will be mounted on /var/www
     command: ['watch', '-n3', 'cat /var/www/index.html']
 
-# that the important thing
-volumes:
-  advanced-sync:
-    external: true

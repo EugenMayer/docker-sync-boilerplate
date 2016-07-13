@@ -1,0 +1,13 @@
+# this is our development docker-compose building on top of the prodicker docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  app-rsync:
+    volumes_from:
+      - container:appcode-rsync-sync:rw # will be mounted on /var/www
+
+# that the important thing
+volumes:
+  appcode-rsync-sync:
+    external: true

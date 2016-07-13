@@ -1,0 +1,13 @@
+# this is our development docker-compose building on top of the prodicker docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  app-unison:
+    volumes_from:
+      - container:appcode-unison-sync:rw # will be mounted on /var/www
+
+# that the important thing
+volumes:
+  appcode-unison-sync:
+    external: true
