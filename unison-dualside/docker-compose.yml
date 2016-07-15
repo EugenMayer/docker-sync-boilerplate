@@ -1,7 +1,8 @@
 # This is our production compose file - not changed for docker-sync or similar
+
 version: "2"
 services:
-  my-app:
+  app-unison-dualside:
     image: alpine
-    container_name: 'your-simplest-app'
+    container_name: 'your-app-unison-dualside'
     command: ['watch', '-n3', 'cat /var/www/index.html']

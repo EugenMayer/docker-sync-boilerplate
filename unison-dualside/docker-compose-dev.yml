@@ -3,10 +3,11 @@
 
 version: "2"
 services:
-  my-app:
+  app-unison-dualside:
     volumes_from:
-      - container:splitted-sync:rw # will be mounted on /var/www
+      - container:appcode-unison-dualside-sync:rw # will be mounted on /var/www
 
+# that the important thing
 volumes:
-  splitted-sync:
+  appcode-unison-dualside-sync:
     external: true
