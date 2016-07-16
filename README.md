@@ -17,7 +17,7 @@ git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
- 3) Now start the sync, first choose the boilerplate either simplest, unison, unison_dualside, rsync, splitted or even advanced
+ 3) Now start the sync, first choose the boilerplate either simplest, unison, unison_dualside, rsync, or even advanced. See [strategies](https://github.com/EugenMayer/docker-sync/wiki/8.-Strategies) to understand the important differences
 
 ---
 
