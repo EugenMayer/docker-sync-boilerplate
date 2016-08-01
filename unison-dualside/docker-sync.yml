@@ -7,6 +7,5 @@ syncs:
     sync_host_port: 20873
     sync_strategy: 'unison_dualside'
     sync_userid: 'from_host'
-    sync_strategy: 'unison-dualside'
     unison-dualside_host_ip: 'auto'
     unison-dualside_host_server_port: 6000
