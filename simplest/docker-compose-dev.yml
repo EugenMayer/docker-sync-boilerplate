@@ -4,8 +4,8 @@
 version: "2"
 services:
   app-simplest:
-    volumes_from:
-      - container:simplest-sync:rw # will be mounted on /var/www
+    volumes:
+      - simplest-sync:rw # will be mounted on /var/www
 
 # that the important thing
 volumes:

@@ -4,8 +4,8 @@
 version: "2"
 services:
   app-unison:
-    volumes_from:
-      - container:appcode-unison-sync:rw # will be mounted on /var/www
+    volumes:
+      - appcode-unison-sync:rw # will be mounted on /var/www
 
 # that the important thing
 volumes:
