@@ -5,7 +5,7 @@ version: "2"
 services:
   app-unison:
     volumes:
-      - appcode-unison-sync:rw # will be mounted on /var/www
+      - appcode-unison-sync:/var/www:rw # will be mounted on /var/www
 
 # that the important thing
 volumes:
