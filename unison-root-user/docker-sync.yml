@@ -1,0 +1,12 @@
+options:
+  verbose: true
+syncs:
+  #IMPORTANT: ensure this name is unique and does not match your other application container name
+  appcode-unison-sync: # tip: add -sync and you keep consistent names als a convention
+    src: './app'
+    dest: '/var/www'
+    sync_strategy: 'unison'
+    sync_excludes: ['ignored_folder', '.ignored_dot_folder']
+    sync_excludes_type: 'Name'
+    # the files should be own by root in the target cointainer
+    sync_uid: 0
