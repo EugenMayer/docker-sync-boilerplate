@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9134cb5e-a48f-479b-bd71-746d9be4a3a0" name="Default" comment="fix unison, remove dualside">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/app/ignored_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/app/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/app/some_folder/.ignored_dot_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/app/some_folder/ignored_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/app/some_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/docker-compose-dev.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/docker-compose.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-ftp-user/docker-sync.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/app/ignored_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/app/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/app/some_folder/.ignored_dot_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/app/some_folder/ignored_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/app/some_folder/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/docker-compose-dev.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/docker-compose.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unison-root-user/docker-sync.yml" />
+    <list default="true" id="9134cb5e-a48f-479b-bd71-746d9be4a3a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="docker-sync-boilerplate.iws" />
@@ -785,7 +769,7 @@
       <workItem from="1468444722056" duration="1135000" />
       <workItem from="1468614302103" duration="242000" />
       <workItem from="1471630869720" duration="1076000" />
-      <workItem from="1481547939838" duration="1162000" />
+      <workItem from="1481547939838" duration="1585000" />
     </task>
     <task id="LOCAL-00001" summary="update examples to use -sync suffixes for the sync_names">
       <created>1468112096323</created>
@@ -822,11 +806,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471631286726</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add usage examples for ftp and root user">
+      <created>1481549115641</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1481549115641</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6723000" />
+    <option name="totallyTimeSpent" value="7146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1573" extended-state="6" />
@@ -841,11 +832,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -877,7 +868,8 @@
     <MESSAGE value="add wiki reference" />
     <MESSAGE value="use the new production/dev syntax to seperate the injections for the docker-compose file and let the docker-compose file be portable" />
     <MESSAGE value="fix unison, remove dualside" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix unison, remove dualside" />
+    <MESSAGE value="add usage examples for ftp and root user" />
+    <option name="LAST_COMMIT_MESSAGE" value="add usage examples for ftp and root user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
