@@ -9,4 +9,4 @@ syncs:
     sync_excludes: ['ignored_folder', '.ignored_dot_folder']
     sync_excludes_type: 'Name'
     # the files should be own by root in the target cointainer
-    sync_uid: 0
+    sync_userid: 1

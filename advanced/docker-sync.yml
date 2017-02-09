@@ -9,9 +9,6 @@ syncs:
     sync_args: '--delete' # delete files on the container if they are deleted on the host
     sync_host_ip: 'localhost'
     sync_host_port: 10872
-    sync_user: 'www-data'
     sync_userid: '1001'
-    sync_group: 'www-data'
-    sync_groupid: '1002'
     watch_args: '-v' # make fswatch verbose
 

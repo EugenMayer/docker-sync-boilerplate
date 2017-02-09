@@ -11,4 +11,4 @@ syncs:
     # this is just for test purposes, do not use sync_user anymore, it will be deprecated, just used uid
     sync_user: 'specialone'
     # example on how to let the files be owned by uid 22, thats the ftp user
-    sync_uid: '22'
+    sync_userid: '22'
