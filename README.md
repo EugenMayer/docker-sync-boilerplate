@@ -39,13 +39,26 @@ In this case you do:
 cd splitted-compose
 docker-sync start
 
-<open a new shel>
+<open a new shell>
 
 cd splitted-compose
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
 ```
 
 More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-you-docker-compose.yml-portable)
+
+---
+
+For example dynamic-configuration-dotnev you will need to copy `.env.dist` to
+`.env`
+
+```
+cd dynamic-configuration-dotnev
+cp .env.dist .env
+```
+
+And after that start things as described above
+
 
 ## Reference
 

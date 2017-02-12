@@ -1,0 +1,14 @@
+# this is our development docker-compose building on top of the production
+# docker-compose, just mounting the sync image - not redefining anything else
+
+version: "2"
+services:
+  app-unison:
+    volumes:
+      - docker-sync:${DESTINATION_PATH}:rw # will be mounted on to the value of DESTINATION_PATH
+
+# that the important thing
+volumes:
+  docker-sync:
+    external:
+      name: "${SYNC_NAME}-unison-sync"
