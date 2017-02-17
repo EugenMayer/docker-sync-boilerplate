@@ -1,3 +1,5 @@
+version: "2"
+
 options:
   compose-file-path: './docker-compose/docker-compose.yml'
   compose-dev-file-path: './docker-compose/docker-compose-dev.yml'
