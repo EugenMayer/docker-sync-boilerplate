@@ -11,13 +11,15 @@ If you have issue, create a issue at [docker-sync](https://github.com/EugenMayer
 gem install docker-sync
 ```
 
+There may be other dependencies that you will have to install but the `docker-sync-stack start` command should help with that. Known dependencies for Mac include: unison, macfsevent, fswatch. These are either installed automatically or you may have to `brew install` them.
+
  2) Now get the boilerplate
 ```
 git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
- 3) Now start the sync, first choose the boilerplate either simplest, unison, unison_dualside, rsync, or even advanced. See [strategies](https://github.com/EugenMayer/docker-sync/wiki/8.-Strategies) to understand the important differences
+ 3) Now start the sync, first choose the boilerplate either advanced, dynamic-configuration-dotnev, rsync, simplest, unison, unison-ftp-user, or unison-root-user. See [strategies](https://github.com/EugenMayer/docker-sync/wiki/8.-Strategies) to understand the important differences
 
 ---
 
@@ -32,29 +34,30 @@ This will start the sync, and start your app-stack defined by in the docker-comp
 
 ---
 
-If you wonder, how you would keep the docker-compose.yml portable, see splitted-compose. The changes for docker-sync are incorporated into an overaly-docker-compose file
+If you wonder, how you would keep the docker-compose.yml portable, see splitted-compose (there is an example in the advanced example of this). The changes for docker-sync are incorporated into an overlay-docker-compose file
 In this case you do:
 
 ```
-cd splitted-compose
-docker-sync start
+# To run development and mount your watched volume.
+cd advanced
+docker-sync-stack start
 
-<open a new shell>
-
-cd splitted-compose
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
+# Production would run docker-compose without mounting a watched volume.
+cd advanced/docker-compose
+docker-compose up -d
 ```
 
 More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-you-docker-compose.yml-portable)
 
 ---
 
-For example dynamic-configuration-dotnev you will need to copy `.env.dist` to
-`.env`
+For example __dynamic-configuration-dotnev__ you will need to __copy__ `.env.dist` to `.env`
 
 ```
 cd dynamic-configuration-dotnev
 cp .env.dist .env
+## Change your settings to whatever you want and then run docker-sync.
+docker-sync-stack start
 ```
 
 And after that start things as described above
