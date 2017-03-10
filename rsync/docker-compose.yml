@@ -4,4 +4,4 @@ version: "2"
 services:
   app-rsync:
     image: alpine
-    container_name: 'your-app'
+    command: ['watch', '-n3', 'cat /var/www/index.html']
