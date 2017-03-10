@@ -3,4 +3,4 @@
 .docker-sync
 app\ folder
 */.env
-;index.html
+index.html
