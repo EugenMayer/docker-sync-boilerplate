@@ -4,5 +4,4 @@ version: "2"
 services:
   app-simplest:
     image: alpine
-    container_name: 'your-simplest-app'
     command: ['watch', '-n3', 'cat /var/www/index.html']

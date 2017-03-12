@@ -4,6 +4,5 @@ version: "2"
 services:
   app-advanced:
     image: alpine
-    container_name: 'your-advanced-app'
     command: ['watch', '-n3', 'cat /var/www/index.html']
 
