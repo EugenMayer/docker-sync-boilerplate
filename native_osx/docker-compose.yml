@@ -2,6 +2,6 @@
 
 version: "2"
 services:
-  app-unison:
+  app-native-osx:
     image: alpine
     command: ['watch', '-n3', 'cat /var/www/index.html']

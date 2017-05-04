@@ -9,3 +9,5 @@ syncs:
     sync_excludes: ['ignored_folder', '.ignored_dot_folder']
     # example on how to let the files be owned by uid 22, thats the ftp user
     sync_userid: '21'
+    sync_strategy: 'unison'
+

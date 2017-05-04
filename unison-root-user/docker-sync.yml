@@ -9,3 +9,4 @@ syncs:
     sync_excludes: ['ignored_folder', '.ignored_dot_folder']
     # the files should be own by root in the target cointainer
     sync_userid: 0
+    sync_strategy: 'unison'

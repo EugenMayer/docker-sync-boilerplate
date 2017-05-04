@@ -3,11 +3,11 @@
 
 version: "2"
 services:
-  app-unison:
+  app-native-osx:
     volumes:
-      - appcode-unison-sync:/var/www:rw # will be mounted on /var/www
+      - appcode-native-osx-sync:/var/www:rw # will be mounted on /var/www
 
 # that the important thing
 volumes:
-  appcode-unison-sync:
+  appcode-native-osx-sync:
     external: true
