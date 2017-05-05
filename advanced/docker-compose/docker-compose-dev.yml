@@ -5,7 +5,7 @@ version: "2"
 services:
   app-advanced:
     volumes_from:
-      - container:advanced-sync:rw # will be mounted on /var/www
+      - container:advanced-sync:nocopy # will be mounted on /var/www
 
 # that the important thing
 volumes:

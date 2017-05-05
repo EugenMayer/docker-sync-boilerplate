@@ -5,7 +5,7 @@ version: "2"
 services:
   app-rsync:
     volumes:
-      - appcode-rsync-sync:/var/www:rw # will be mounted on /var/www
+      - appcode-rsync-sync:/var/www:nocopy # will be mounted on /var/www
 
 # that the important thing
 volumes:
