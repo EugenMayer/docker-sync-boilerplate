@@ -27,7 +27,7 @@ cd docker-sync-boilerplate
 
 For example rsync
 ```
-cd rsync
+cd default
 docker-sync-stack start
 ```
 This will start the sync, and start your app-stack defined by in the docker-compose file. All in one step
