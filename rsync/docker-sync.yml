@@ -3,7 +3,7 @@ options:
   verbose: true
 syncs:
   #IMPORTANT: ensure this name is unique and does not match your other application container name
-  appcode-rsync-sync: #tip: add -sync and you keep consistent names als a convention
+  appcode-rsync-sync: #tip: add -sync and you keep consistent names as a convention
     src: './app/'
     sync_host_ip: 'auto'
     sync_host_port: 10872
