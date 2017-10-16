@@ -1,0 +1,10 @@
+version: '2'
+
+# On Linux test volume is a simple bind mount
+volumes:
+  test:
+    driver_opts:
+      type: none
+      device: ${PWD}
+      o: bind
+

@@ -1,0 +1,21 @@
+version: '2'
+
+volumes:
+  # this volume persists Unison state even after `docker-compose down`
+  unison:
+  # this volume will be synchronized with the local directory
+  test:
+
+services:
+  sync:
+    # Unison container is built locally based on 'unison/Dockerfile'
+    build:
+      context: unison
+    volumes:
+      # local directory to synchronize
+      - ${PWD}:/root/macos
+      # Docker volume to synchronize
+      - test:/root/docker
+      # Unison state
+      - unison:/root/.unison
+

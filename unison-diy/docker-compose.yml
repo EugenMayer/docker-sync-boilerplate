@@ -1,0 +1,16 @@
+version: '2'
+services:
+  test:
+    image: busybox
+    # sleep is here to give unison time to finish the initial synchronization
+    # saner way is to trace unison logs for
+    # "Synchronization finished" or "Nothing to do"
+    command: sh -c 'sleep 10 && ls -l /root/test'
+    # volume to be mounted inside the test container
+    # - on Linux it is a plain bind mount (see docker-compose-Linux.yml)
+    # - on macOS it is a Docker volume synchronized within a dedicated 'unison'
+    # container with a quasi-bind-mounted ('osxfs') local directory by Unison
+    # (see docker-compose-Darwin.yml)
+    volumes:
+    - test:/root/test
+
