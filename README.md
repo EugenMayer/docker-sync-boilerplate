@@ -47,7 +47,7 @@ cd advanced/docker-compose
 docker-compose up -d
 ```
 
-More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-you-docker-compose.yml-portable)
+More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-your-docker-compose.yml-portable)
 
 ---
 
