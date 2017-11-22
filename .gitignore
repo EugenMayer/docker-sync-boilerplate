@@ -1,6 +1,4 @@
 .idea/workspace.xml
 .idea/composerJson.xml
 .docker-sync
-app\ folder
 */.env
-index.html
