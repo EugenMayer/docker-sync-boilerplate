@@ -1,7 +1,7 @@
-This is boilerplate for [docker-sync](https://github.com/EugenMayer/docker_sync).
+This is a boilerplate for [docker-sync](https://github.com/EugenMayer/docker_sync).
 Either as a starting point for your configuration or to try out what docker-sync offers in terms of performance and the toolchain in practical.
 
-If you have issue, create a issue at [docker-sync](https://github.com/EugenMayer/docker_sync)
+If you have any issues, create an issue at [docker-sync](https://github.com/EugenMayer/docker_sync)
 
 **Start with**
 
