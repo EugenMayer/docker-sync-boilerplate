@@ -4,4 +4,4 @@ version: "2"
 services:
   app-native-osx:
     image: alpine
-    command: ['watch', '-n3', 'cat /var/www/index.html']
+    command: 'watch -n3 cat /var/www/index.html'
