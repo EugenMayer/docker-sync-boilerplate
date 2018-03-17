@@ -5,4 +5,5 @@ services:
   app-unison:
     image: alpine
     container_name: 'your-app'
-    command: ['watch', '-n3', 'cat /var/www/index.html']
+    command: 'watch -n3 cat /var/www/index.html'
+
