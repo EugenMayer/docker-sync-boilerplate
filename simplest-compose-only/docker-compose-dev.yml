@@ -1,0 +1,30 @@
+# this is our development docker-compose building on top of the prodicker docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  app-simplest:
+    volumes:
+      - simplest-sync:/var/www:nocopy # will be mounted on /var/www
+
+  simplest-syncer:
+    image: eugenmayer/unison:2.51.2.1
+    command: /entrypoint.sh supervisord
+    volumes:
+      - ./app:/host_sync
+      - simplest-sync:/app_sync
+    environment:
+      - UNISON_SRC=/host_sync
+      - UNISON_DEST=/app_sync
+      - UNISON_ARGS=  -prefer /host_sync -numericids -auto -batch
+      - UNISON_WATCH_ARGS=-repeat watch
+      - HOST_VOLUME=/host_sync
+      - APP_VOLUME=/app_sync
+      - TZ=Europe/London
+      - LANG=C.UTF-8
+      - UNISON_DIR=/data
+      - HOME=/root
+
+# that the important thing
+volumes:
+  ? simplest-sync
