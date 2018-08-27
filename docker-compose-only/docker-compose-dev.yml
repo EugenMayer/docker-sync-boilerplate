@@ -16,15 +16,16 @@
 
 version: "2"
 services:
-  app:
+  app-docker-compose-only:
     volumes:
       # If you wanted to do this via docker-for-mac's default osxfs mounts, you
       # would simply write - ./app:/var/www. In our case, we want to
       # improve our filesystem performance, by adding unison as a layer of
-      # indirection. To do this, we create a named volume ('app-sync' by
-      # convention, to avoid clashing with other named volumes) and then start
-      # a second docker container which runs unison to sync ./app with app-sync.
-      - app-sync:/var/www:nocopy
+      # indirection. To do this, we create a named volume (
+      # 'app-docker-compose-only-sync' by convention, to avoid clashing with
+      # other named volumes) and then start a second docker container which
+      # runs unison to sync ./app with app-docker-compose-only-sync.
+      - app-docker-compose-only-sync:/var/www:nocopy
 
   app-syncer:
     image: eugenmayer/unison:2.51.2.1
@@ -32,10 +33,10 @@ services:
     volumes:
       # This container is configured to sync /host_sync to /app_sync. We bind
       # ./app to /host_sync using docker-for-mac's osxfs, and then bind
-      # /app_sync to our app-sync named volume, so that it can be used by our
-      # `app` container, above.
+      # /app_sync to our app-docker-compose-only-sync named volume, so that it
+      # can be used by our `app-docker-compose-only` container, above.
       - ./app:/host_sync
-      - app-sync:/app_sync
+      - app-docker-compose-only-sync:/app_sync
     environment:
       # These variables control which directories are synced by unison.
       - HOST_VOLUME=/host_sync
@@ -47,7 +48,7 @@ services:
       # `sync_excludes: ['ignored_folder', '.ignored_dot_folder']`
       # in `../default/docker-sync.yml`. Read the unison manual for details
       # of their ignore patterns. All other flags are fine to leave as they are.
-      - UNISON_ARGS= -ignore='Name ignored_folder' -ignore='Name .ignored_dot_folder' -prefer /host_sync -numericids -auto -batch
+      - UNISON_ARGS=-ignore='Name ignored_folder' -ignore='Name .ignored_dot_folder' -prefer /host_sync -numericids -auto -batch
       - UNISON_WATCH_ARGS=-repeat watch
       # A few extra environment variables to make C libraries behave sensibly.
       - TZ=Europe/London
@@ -57,4 +58,4 @@ services:
 # Named volumes must be declared in the `volumes` section, but don't need any
 # other configuration.
 volumes:
-  ? app-sync
+  ? app-docker-compose-only-sync

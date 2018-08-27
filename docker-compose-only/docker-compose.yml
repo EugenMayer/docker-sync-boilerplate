@@ -2,6 +2,6 @@
 
 version: "2"
 services:
-  app:
+  app-docker-compose-only:
     image: alpine
     command: ["sh", "-c", "while sleep 3; do cat /var/www/index.html; done"]
