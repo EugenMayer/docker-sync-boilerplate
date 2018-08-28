@@ -1,0 +1,61 @@
+# This is our development docker-compose file, building on top of the prod one.
+# This file adds a synchronisation between ./app and /var/www, that has the same
+# performance characteristics as the default native_osxfs scheme defined in
+# ../default/.
+# This example configuration runs the same docker image as ../default, with the
+# same environment. It does not need a docker-sync daemon running on your host
+# though, so you can bring up your development environment using
+# `docker-compose up -d` without first running `docker-sync start`. If you wish
+# to read the logs of the sync process, use `docker-compose logs app-syncer`.
+#
+# If you have a native_osxfs based docker-sync configuration that you want to
+# turn into a docker-compose only configuration, run `docker-sync start` and
+# then use `docker inspect -f '{{ .Mounts }}' $container_id` and
+# `docker exec $container_id env` to work out the elements needed to create a
+# docker-compose based container definition.
+
+version: "2"
+services:
+  app-docker-compose-only:
+    volumes:
+      # If you wanted to do this via docker-for-mac's default osxfs mounts, you
+      # would simply write - ./app:/var/www. In our case, we want to
+      # improve our filesystem performance, by adding unison as a layer of
+      # indirection. To do this, we create a named volume (
+      # 'app-docker-compose-only-sync' by convention, to avoid clashing with
+      # other named volumes) and then start a second docker container which
+      # runs unison to sync ./app with app-docker-compose-only-sync.
+      - app-docker-compose-only-sync:/var/www:nocopy
+
+  app-syncer:
+    image: eugenmayer/unison:2.51.2.1
+    command: /entrypoint.sh supervisord
+    volumes:
+      # This container is configured to sync /host_sync to /app_sync. We bind
+      # ./app to /host_sync using docker-for-mac's osxfs, and then bind
+      # /app_sync to our app-docker-compose-only-sync named volume, so that it
+      # can be used by our `app-docker-compose-only` container, above.
+      - ./app:/host_sync
+      - app-docker-compose-only-sync:/app_sync
+    environment:
+      # These variables control which directories are synced by unison.
+      - HOST_VOLUME=/host_sync
+      - APP_VOLUME=/app_sync
+      - UNISON_SRC=/host_sync
+      - UNISON_DEST=/app_sync
+      - UNISON_DIR=/data
+      # The -ignore flags correspond to the line
+      # `sync_excludes: ['ignored_folder', '.ignored_dot_folder']`
+      # in `../default/docker-sync.yml`. Read the unison manual for details
+      # of their ignore patterns. All other flags are fine to leave as they are.
+      - UNISON_ARGS=-ignore='Name ignored_folder' -ignore='Name .ignored_dot_folder' -prefer /host_sync -numericids -auto -batch
+      - UNISON_WATCH_ARGS=-repeat watch
+      # A few extra environment variables to make C libraries behave sensibly.
+      - TZ=Europe/London
+      - LANG=C.UTF-8
+      - HOME=/root
+
+# Named volumes must be declared in the `volumes` section, but don't need any
+# other configuration.
+volumes:
+  ? app-docker-compose-only-sync
