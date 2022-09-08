@@ -19,7 +19,7 @@ git clone https://github.com/EugenMayer/docker-sync-boilerplate
 cd docker-sync-boilerplate
 ```
 
- 3) Now start the sync, first choose the boilerplate either advanced, dynamic-configuration-dotnev, rsync, simplest, unison, unison-ftp-user, or unison-root-user. See [strategies](https://github.com/EugenMayer/docker-sync/wiki/8.-Strategies) to understand the important differences
+ 3) Now start the sync, first choose the boilerplate either advanced, dynamic-configuration-dotnev, rsync, simplest, unison, unison-ftp-user, or unison-root-user. See [strategies](https://docker-sync.readthedocs.io/en/latest/advanced/sync-strategies.html) to understand the important differences
 
 ---
 
@@ -47,7 +47,7 @@ cd advanced/docker-compose
 docker-compose up -d
 ```
 
-More about this in [the wiki](https://github.com/EugenMayer/docker-sync/wiki/Keep-your-docker-compose.yml-portable)
+More about this in [the wiki](https://docker-sync.readthedocs.io/en/latest/getting-started/configuration.html?highlight=portable#portable-docker-compose-yml)
 
 ---
 
@@ -65,4 +65,4 @@ And after that start things as described above
 
 ## Reference
 
-If you want to know, what options you actually have, see the [configuration-reference](https://github.com/EugenMayer/docker-sync/wiki/2.-Configuration#docker-syncyml)
+If you want to know, what options you actually have, see the [configuration-reference](https://docker-sync.readthedocs.io/en/latest/getting-started/configuration.html)
